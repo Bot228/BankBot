@@ -8,7 +8,7 @@ from requests.exceptions import ReadTimeout
 logging.basicConfig(filename='history.log', level=logging.DEBUG,
                     format=' %(asctime)s - %(levelname)s - %(message)s')
 
-bot = telebot.TeleBot('HEROKU_TOKEN')
+bot = telebot.TeleBot('1391169462:AAFvQKGlYKgcBbBEF7azdpEXBglfIs4arLM')
 parse = Parse(bot)
 
 @bot.message_handler(commands=['help', 'start'])
