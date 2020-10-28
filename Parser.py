@@ -17,7 +17,7 @@ class Parse:
         self.ans = ''
         self.flag2 = False
         self.URL = 'https://mainfin.ru/currency/'
-        a = message
+        a = message.text
         a = str(a)
         a = a.lower()
         if (a != ""):
@@ -140,7 +140,7 @@ class Parse:
         URL = Parse.create_URL(self, message)
         if (self.flag2 == False):
             try:
-                response = requests.get(URL, headers=self.HEADERS)
+                response = requests.get(URL)
                 response.encoding = 'utf8'
                 soup = BeautifulSoup(response.text, 'html.parser')
                 file = open(str(message.from_user.id) + '.txt', "w", encoding="utf-8")
