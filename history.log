@@ -2045,3 +2045,42 @@ telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. 
  2020-10-28 23:33:33,360 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
  2020-10-28 23:33:53,698 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
  2020-10-28 23:34:13,858 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:34:34,622 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:34:54,784 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:35:14,931 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:35:35,061 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:35:55,203 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:36:15,333 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:36:35,551 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:36:55,719 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:37:15,896 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:37:36,038 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:37:56,209 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:38:16,337 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:38:36,475 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:38:56,605 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:39:16,756 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:39:36,913 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:39:57,070 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:40:17,199 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:40:37,328 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:40:57,456 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:41:17,583 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:41:37,711 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:41:57,850 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:42:18,004 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:42:38,193 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:42:58,324 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:43:18,460 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:43:38,589 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:43:58,736 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:44:18,883 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:44:39,029 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:44:59,169 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:45:19,385 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:45:39,535 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:45:39,537 - INFO - Resetting dropped connection: api.telegram.org
+ 2020-10-28 23:46:00,188 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:46:20,328 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:46:40,925 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:47:01,056 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
