@@ -2088,3 +2088,10 @@ telebot.apihelper.ApiException: A request to the Telegram API was unsuccessful. 
  2020-10-28 23:47:41,407 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
  2020-10-28 23:48:01,589 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=264690819&timeout=20 HTTP/1.1" 200 23
  2020-10-28 23:48:07,864 - INFO - Starting new HTTPS connection (1): api.telegram.org
+ 2020-10-28 23:48:28,438 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:48:50,050 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:49:10,158 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:49:30,262 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:49:50,360 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:50:10,626 - DEBUG - "GET /bot1366234798:AAEi6A7k7FVeume-m3Ifilq7Q-ALlotAjlc/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 23
+ 2020-10-28 23:50:16,716 - INFO - Starting new HTTPS connection (1): api.telegram.org
