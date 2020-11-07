@@ -4,7 +4,7 @@ import telebot
 from Parser import Parse
 from requests.exceptions import ReadTimeout
 
-bot = telebot.TeleBot('1366234798:AAH2ZMNxBlm-2k_hWOwlWj-J0yOAa5YWhIE')
+bot = telebot.TeleBot('1414042748:AAFOH8ObYuI96SRXp9yBNLELS4hz22IcqkE')
 parse = Parse(bot)
 matrix = \
 [[0,155,160,165,170,175,180,185,190,195],
