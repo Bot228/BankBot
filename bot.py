@@ -7,24 +7,21 @@ from requests.exceptions import ReadTimeout
 bot = telebot.TeleBot('1366234798:AAH2ZMNxBlm-2k_hWOwlWj-J0yOAa5YWhIE')
 parse = Parse(bot)
 matrix = \
-[[0,155,160,165,170,175,180,185,190,195,200,205,210,215,220,225,230,235],
-[50,1,1,1,1,1,1,2,2,2,2,3,3,3,4,4,4,5],
-[55,1,1,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5],
-[60,1,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5,5],
-[65,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5,5,5],
-[70,1,1,2,2,2,2,3,3,3,4,4,4,5,5,5,5,5],
-[75,1,2,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5],
-[80,2,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,5],
-[85,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,5,5],
-[90,2,2,3,3,3,4,4,4,5,5,5,5,5,5,5,5,5],
-[95,2,3,3,3,4,4,4,5,5,5,5,5,5,5,5,5,5],
-[100,3,3,3,4,4,4,5,5,5,5,5,5,5,5,5,5,5],
-[105,3,3,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5],
-[110,3,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5],
-[115,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-[120,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-[125,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-[130,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]]
+[[0,155,160,165,170,175,180,185,190,195],
+[50,1,1,1,1,1,1,2,2,2],
+[55,1,1,1,1,1,2,2,2,2],
+[60,1,1,1,1,2,2,2,2,3],
+[65,1,1,1,2,2,2,2,3,3],
+[70,1,1,2,2,2,2,3,3,3],
+[75,1,2,2,2,2,3,3,3,4],
+[80,2,2,2,2,3,3,4,4,4],
+[85,2,2,2,3,3,3,4,5,5],
+[90,2,2,3,3,3,4,5,6,6],
+[95,2,3,3,3,4,4,5,6,7],
+[100,3,3,3,4,4,4,6,7,7],
+[105,3,3,4,4,4,5,6,7,7],
+[110,3,4,4,4,5,5,6,7,7],
+[115,4,4,4,5,5,5,6,7,7]]
 
 '''
 def send_keyboard():
@@ -65,39 +62,49 @@ def sizes(message):
                 b = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
                 x = dict(zip(a, b))
                 y = dict(zip(c, b))
-                if (hg <= 155):
-                    mysize = 'Ваш размер одежды: XS'
-                elif (wg <= 50):
-                    mysize = 'Ваш размер одежды: XS'
-                elif (hg >= 225):
-                    mysize = 'Ваш размер одежды: XS'
-                elif (wg >= 130):
-                    mysize = 'Ваш размер одежды: XS'
+                if (hg < 155):
+                    mysize = 'Ваш размер одежды: XS\nРазмер: 42-44'
+                elif (wg < 50):
+                    mysize = 'Ваш размер одежды: XS\nРазмер: 42-44'
+                elif (hg > 195):
+                    mysize = 'У вас слишком большой размер'
+                elif (wg > 115):
+                    mysize = 'У вас слишком большой размер'
                 elif (matrix[x[hg]][y[wg]] == 1):
                     if (fit == 'Slim Fit 👚'):
-                        mysize = 'Ваш размер одежды: XS'
+                        mysize = 'Ваш размер одежды: XS\nРазмер: 42-44'
                     elif (fit == 'Regular Fit 👔'):
-                        mysize = 'Ваш размер одежды: S'
+                        mysize = 'Ваш размер одежды: S\nРазмер: 44-46'
                 elif (matrix[x[hg]][y[wg]] == 2):
                     if (fit == 'Slim Fit 👚'):
-                        mysize = 'Ваш размер одежды: S'
+                        mysize = 'Ваш размер одежды: S\nРазмер: 44-46'
                     elif (fit == 'Regular Fit 👔'):
-                        mysize = 'Ваш размер одежды: M'
+                        mysize = 'Ваш размер одежды: M\nРазмер: 46-48'
                 elif (matrix[x[hg]][y[wg]] == 3):
                     if (fit == 'Slim Fit 👚'):
-                        mysize = 'Ваш размер одежды: M'
+                        mysize = 'Ваш размер одежды: M\nРазмер: 46-48'
                     elif (fit == 'Regular Fit 👔'):
-                        mysize = 'Ваш размер одежды: L'
+                        mysize = 'Ваш размер одежды: L\nРазмер: 48-50'
                 elif (matrix[x[hg]][y[wg]] == 4):
                     if (fit == 'Slim Fit 👚'):
-                        mysize = 'Ваш размер одежды: L'
+                        mysize = 'Ваш размер одежды: L\nРазмер: 48-50'
                     elif (fit == 'Regular Fit 👔'):
-                        mysize = 'Ваш размер одежды: XL'
+                        mysize = 'Ваш размер одежды: XL\nРазмер: 52'
                 elif (matrix[x[hg]][y[wg]] == 5):
                     if (fit == 'Slim Fit 👚'):
-                        mysize = 'Ваш размер одежды: XL'
+                        mysize = 'Ваш размер одежды: XL\nРазмер: 52'
                     elif (fit == 'Regular Fit 👔'):
-                        mysize = 'Ваш размер одежды: XXL'
+                        mysize = 'Ваш размер одежды: XXL\nРазмер: 54'
+                elif (matrix[x[hg]][y[wg]] == 6):
+                    if (fit == 'Slim Fit 👚'):
+                        mysize = 'Ваш размер одежды: XXL\nРазмер: 54'
+                    elif (fit == 'Regular Fit 👔'):
+                        mysize = 'Ваш размер одежды: XXL\nРазмер: 56'
+                elif (matrix[x[hg]][y[wg]] == 7):
+                    if (fit == 'Slim Fit 👚'):
+                        mysize = 'Ваш размер одежды: XXXL\nРазмер: 56'
+                    elif (fit == 'Regular Fit 👔'):
+                        mysize = 'Ваш размер одежды: XXXL\nРазмер: 56'
                 bot.send_message(message.chat.id, mysize)
                 size.write(mysize)
                 size.close()
@@ -278,8 +285,6 @@ def sends_text(message):
                 state.write('4')
                 state.close()
                 send_size(message)
-                #keyboard = send_keyboard()
-                #bot.send_message(message.chat.id, 'Вы вернулись в основное меню!', reply_markup=keyboard)
                 return
             elif (str(message.text) == 'Regular Fit 👔'):
                 with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
@@ -290,8 +295,6 @@ def sends_text(message):
                 state.write('4')
                 state.close()
                 send_size(message)
-                #bot.send_message(message.chat.id, 'Давайте заполним форму заново')
-                #send_size(message)
                 return
 
     with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
@@ -425,5 +428,4 @@ while True:
 
     except ConnectionError:
         time.sleep(15)
-
 
