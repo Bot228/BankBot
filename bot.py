@@ -220,108 +220,106 @@ def check(message):
 '''
 @bot.message_handler(content_types=['text'])
 def sends_text(message):
-    keyboard = send_keyboard()
-    a = message.text
-    a = str(a)
-    if (a == 'Мои размеры 👕'):
-        try:
+    try:
+        keyboard = send_keyboard()
+        a = message.text
+        a = str(a)
+        if (a == 'Мои размеры 👕'):
             file2 = open('storage\\user_ans\\' + str(message.from_user.id) + '_ans.txt', "r", encoding="utf-8")
             bot.send_message(message.chat.id, file2.read(), reply_markup=keyboard)
             file2.close()
             with open('storage\\user_size\\' + str(message.from_user.id) + '_size.txt', "r+", encoding="utf-8") as size:
                 bot.send_message(message.chat.id, size.read())
                 size.close()
-        except:
-            bot.send_message(message.chat.id, 'У вас пока нет размеров, необходимо заполнить форму', reply_markup=keyboard)
-    if (a == 'Узнать размер 📏'):
+            #bot.send_message(message.chat.id, 'У вас пока нет размеров, необходимо заполнить форму', reply_markup=keyboard)
+        if (a == 'Узнать размер 📏'):
+            with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "w+", encoding="utf-8")) as state:
+                state.write('1')
+                state.close()
+                send_size(message)
+                return
         with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
-            if (state.readline(1) == '0'):
-                state.seek(0)
-                state.truncate()
-                state.write('1')
-                state.close()
-                send_size(message)
+            if (state.readline(1) == '1'):
+                with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "w+", encoding="utf-8")) as file:
+                    try:
+                        float(message.text)
+                        file.write('Ваш рост:\n' + str(message.text) + '\n')
+                        file.close()
+                        state.seek(0)
+                        state.truncate()
+                        state.write('2')
+                        state.close()
+                        send_size(message)
+                    except:
+                        bot.send_message(message.chat.id, 'Вы ввели неправильные символы!')
                 return
-    with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
-        if (state.readline(1) == '1'):
-            with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "w+", encoding="utf-8")) as file:
-                try:
-                    float(message.text)
-                    file.write('Ваш рост:\n' + str(message.text) + '\n')
+
+        with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
+            if (state.readline(1) == '2'):
+                with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
+                    try:
+                        float(message.text)
+                        file.write('Ваш вес:\n' + str(message.text) + '\n')
+                        file.close()
+                        state.seek(0)
+                        state.truncate()
+                        state.write('3')
+                        state.close()
+                        send_size(message)
+                    except:
+                        bot.send_message(message.chat.id, 'Вы ввели неправильные символы!')
+
+        with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
+            if (state.readline(1) == '3'):
+                if (str(message.text) == 'Slim Fit 👚'):
+                    #bot.send_message(message.chat.id, 'Ваши данные успешно записаны!')
+                    with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
+                        file.write('Ваш крой:\n' + str(message.text))
+                        file.close()
+                    state.seek(0)
+                    state.truncate()
+                    state.write('4')
+                    state.close()
+                    send_size(message)
+                    return
+                elif (str(message.text) == 'Regular Fit 👔'):
+                    with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
+                        file.write('Ваш крой:\n' + str(message.text))
+                        file.close()
+                    state.seek(0)
+                    state.truncate()
+                    state.write('4')
+                    state.close()
+                    send_size(message)
+                    return
+
+        with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
+            if (state.readline(1) == '4'):
+                if (str(message.text) == 'Да 👍'):
+                    bot.send_message(message.chat.id, 'Ваши данные успешно записаны!')
+                    file = open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "r+", encoding="utf-8")
+                    file2 = open('storage\\user_ans\\' + str(message.from_user.id) + '_ans.txt', "w", encoding="utf-8")
+                    file2.write(file.read())
+                    file2.close()
                     file.close()
                     state.seek(0)
                     state.truncate()
-                    state.write('2')
+                    state.write('0')
                     state.close()
-                    send_size(message)
-                except:
-                    bot.send_message(message.chat.id, 'Вы ввели неправильные символы!')
-            return
-
-    with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
-        if (state.readline(1) == '2'):
-            with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
-                try:
-                    float(message.text)
-                    file.write('Ваш вес:\n' + str(message.text) + '\n')
-                    file.close()
+                    sizes(message)
+                    keyboard = send_keyboard()
+                    bot.send_message(message.chat.id, 'Вы вернулись в основное меню!', reply_markup=keyboard)
+                    return
+                elif (str(message.text) == 'Нет 👎'):
                     state.seek(0)
                     state.truncate()
-                    state.write('3')
+                    state.write('1')
                     state.close()
+                    bot.send_message(message.chat.id, 'Давайте заполним форму заново')
                     send_size(message)
-                except:
-                    bot.send_message(message.chat.id, 'Вы ввели неправильные символы!')
-
-    with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
-        if (state.readline(1) == '3'):
-            if (str(message.text) == 'Slim Fit 👚'):
-                #bot.send_message(message.chat.id, 'Ваши данные успешно записаны!')
-                with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
-                    file.write('Ваш крой:\n' + str(message.text))
-                    file.close()
-                state.seek(0)
-                state.truncate()
-                state.write('4')
-                state.close()
-                send_size(message)
-                return
-            elif (str(message.text) == 'Regular Fit 👔'):
-                with (open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "a", encoding="utf-8")) as file:
-                    file.write('Ваш крой:\n' + str(message.text))
-                    file.close()
-                state.seek(0)
-                state.truncate()
-                state.write('4')
-                state.close()
-                send_size(message)
-                return
-
-    with (open('storage\\user_state\\' + str(message.from_user.id) + '_state.txt', "r+", encoding="utf-8")) as state:
-        if (state.readline(1) == '4'):
-            if (str(message.text) == 'Да 👍'):
-                bot.send_message(message.chat.id, 'Ваши данные успешно записаны!')
-                file = open('storage\\user_info\\' + str(message.from_user.id) + '.txt', "r+", encoding="utf-8")
-                file2 = open('storage\\user_ans\\' + str(message.from_user.id) + '_ans.txt', "w", encoding="utf-8")
-                file2.write(file.read())
-                file2.close()
-                file.close()
-                state.seek(0)
-                state.truncate()
-                state.write('0')
-                state.close()
-                sizes(message)
-                keyboard = send_keyboard()
-                bot.send_message(message.chat.id, 'Вы вернулись в основное меню!', reply_markup=keyboard)
-                return
-            elif (str(message.text) == 'Нет 👎'):
-                state.seek(0)
-                state.truncate()
-                state.write('1')
-                state.close()
-                bot.send_message(message.chat.id, 'Давайте заполним форму заново')
-                send_size(message)
-                return
+                    return
+    except FileNotFoundError:
+        bot.send_message(message.chat.id, 'Напишите /start и заполните форму с подбором размеров', reply_markup=keyboard)
 
     '''
     if (a == 'Условия сотрудничества'):
