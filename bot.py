@@ -319,7 +319,7 @@ def sends_text(message):
                     send_size(message)
                     return
     except FileNotFoundError:
-        bot.send_message(message.chat.id, 'Напишите /start и заполните форму с подбором размеров', reply_markup=keyboard)
+        bot.send_message(message.chat.id, 'Заполните форму с подбором размеров', reply_markup=keyboard)
 
     '''
     if (a == 'Условия сотрудничества'):
